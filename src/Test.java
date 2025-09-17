@@ -9,6 +9,11 @@ public class Test {
         list.stream()
                 .filter(n -> n % 2 == 0)
                 .forEach(i -> System.out.println(i));
+
+        list.stream()
+                .filter(n -> n % 2 != 0)
+                .forEach(i -> System.out.println(i));
+
         
     }
 }
