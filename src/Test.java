@@ -14,6 +14,6 @@ public class Test {
                 .filter(n -> n % 2 != 0)
                 .forEach(i -> System.out.println(i));
 
-        
+
     }
 }
