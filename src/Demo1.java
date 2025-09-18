@@ -19,5 +19,9 @@ public class Demo1 {
                 .limit(4)
                 .collect(Collectors.toList());
         System.out.println(num);
+
+
+
+        int a = 12;
     }
 }
