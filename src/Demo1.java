@@ -1,14 +1,23 @@
 import java.util.Arrays;
 import java.util.List;
+import java.util.Optional;
+import java.util.stream.Collectors;
 
 public class Demo1 {
 
+
     public static void main(String[] args) {
 
-        List<Integer> list = Arrays.asList(10,15,8,49,25,98,98,32,15);
-        int max =  list.stream()
-                .max(Integer::compareTo)
-                .get();
-        System.out.println(max);
+        List<Integer> list = Arrays.asList(10, 15, 8, 49, 25, 98, 98, 32, 15);
+        long count = list.stream()
+                .count();
+        System.out.println(count);
+
+
+        List<Integer> num = list.stream()
+                .distinct()
+                .limit(4)
+                .collect(Collectors.toList());
+        System.out.println(num);
     }
 }
