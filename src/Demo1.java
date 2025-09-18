@@ -1,5 +1,7 @@
 import java.util.Arrays;
 import java.util.List;
+import java.util.Optional;
+import java.util.stream.Collectors;
 
 public class Demo1 {
 
@@ -11,5 +13,11 @@ public class Demo1 {
                 .count();
         System.out.println(count);
 
+
+        List<Integer> num = list.stream()
+                .distinct()
+                .limit(4)
+                .collect(Collectors.toList());
+        System.out.println(num);
     }
 }
